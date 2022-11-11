@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
 <div class="container">
     <div class="row">
         <div class="col-md-4"> <h3>Listagem de Alunos</h3> </div>
@@ -10,6 +11,7 @@
                 <tr>
                     <th>Id</th>
                     <th>Nome</th>
+                    <th>CPF</th>
                     <th>Endereço</th>
                     <th>Cidade</th>
                     <th>Telefone</th>
@@ -24,11 +26,14 @@
                 <tr>
                     <td>{{ $aluno->id }}</td>
                     <td>{{ $aluno->nome }}</td>
-                    <td>{{ $aluno->registro }}</td>
                     <td>{{ $aluno->cpf }}</td>
-                    <td>{{ $aluno->formacao }}</td>
+                    <td>{{ $aluno->endereco }}</td>
                     <td>{{ $aluno->cidade }}</td>
                     <td>{{ $aluno->telefone }}</td>
+                    <td>{{ $aluno->sexo }}</td>
+                    <td>{{ $aluno->data_nascimento }}</td>
+                    <td>{{ $aluno->matricula }}</td>
+                    <td>{{ $aluno->data_matricula }}</td>
                     <td>
                         <ul class="list-inline">
                             <li> <a href="{{ route('aluno.edit', ['id' => $aluno->id]) }}">Editar</a> </li>
@@ -49,7 +54,6 @@
             </button>
     </div>
     @endif
-    <div class="col-md-8"> <a href="{{ route('aluno.create') }}" class="btn btn-primary">Incluir Professor</a> </div>
+    <div class="col-md-8"> <a href="{{ route('aluno.create') }}" class="btn btn-primary">Incluir Aluno</a> </div>
 </div>
 @endsection
-

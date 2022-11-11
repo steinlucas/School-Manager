@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-Use Exception;
+use Exception;
 use Illuminate\Http\Request;
 use App\Models\Professor;
 
@@ -57,6 +57,7 @@ class ProfessoresController extends Controller
                 'cidade' => 'required',
                 'telefone' => 'required'
             ]);
+            
             $professor = Professor::find($id);
             $professor->nome = $request->nome;
             $professor->registro = $request->registro;

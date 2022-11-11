@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProfessoresController;
+use App\Http\Controllers\AlunosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,3 +32,10 @@ Route::post('/professores/store', [ProfessoresController::class, 'store'])->name
 Route::get('/professores/edit/{id}', [ProfessoresController::class, 'edit'])->name('professor.edit');
 Route::post('/professores/update/{id}', [ProfessoresController::class, 'update'])->name('professor.update');
 Route::get('/professores/destroy/{id}', [ProfessoresController::class, 'destroy'])->name('professor.destroy');
+
+Route::get('/alunos', [AlunosController::class, 'index'])->name('aluno.index');
+Route::get('/alunos/create', [AlunosController::class, 'create'])->name('aluno.create');
+Route::post('/alunos/store', [AlunosController::class, 'store'])->name('aluno.store');
+Route::get('/alunos/edit/{id}', [AlunosController::class, 'edit'])->name('aluno.edit');
+Route::post('/alunos/update/{id}', [AlunosController::class, 'update'])->name('aluno.update');
+Route::get('/alunos/destroy/{id}', [AlunosController::class, 'destroy'])->name('aluno.destroy');

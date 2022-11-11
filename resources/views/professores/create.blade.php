@@ -1,6 +1,6 @@
 @extends('layouts.app')
- 
 @section('content')
+
 <div class="container">
     <div class="row">
         <h3>Novo Professor</h3>
@@ -37,8 +37,8 @@
             </div>
 
             <div class="form-group">
-                    <input type="submit" name="save_professor" value="Salvar professor" class="btn btn-success">
-                    <input type="submit" name="cancel" value="Cancelar" class="btn btn-info">
+                <input type="submit" name="save_professor" value="Salvar professor" class="btn btn-success">
+                <input type="submit" name="cancel" value="Cancelar" class="btn btn-info">
             </div>
 
         <form>

@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-Use Exception;
+
+use Exception;
 use Illuminate\Http\Request;
 use App\Models\Usuario;
+
 class UsuariosController extends Controller
 {
     /**
@@ -43,7 +45,6 @@ class UsuariosController extends Controller
                 $usuario->telefone = $request->telefone;
     
                 $usuario = $usuario->save();
-    
                 $request->session()->flash('message', 'Usuário cadastrado com sucesso');
             } catch (Exception $e) {
                 $request->session()->flash('message', 'Erro ao cadastrar novo usuário! ');
