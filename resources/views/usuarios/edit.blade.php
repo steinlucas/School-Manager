@@ -11,21 +11,21 @@
             <input type="text" id="nome" name="nome" value="{{ $usuario->nome}}">
            @if ($errors->has('nome'))
 	      <li>{{ $errors->first('nome') }}</li>
-	   @endif
+	       @endif
         </div>
         <div>
-            <label for="modelo">Endereço</label>
+            <label for="endereco">Endereço</label>
             <input type="text" id="endereco" name="endereco" value="{{ $usuario->endereco}}">
            @if ($errors->has('endereco'))
 	      <li>{{ $errors->first('endereco') }}</li>
-	   @endif
+	       @endif
         </div>
         <div>
-            <label for="fabricante">Telefone</label>
+            <label for="telefone">Telefone</label>
             <input type="text" id="telefone" name="telefone" value="{{ $usuario->telefone}}">
            @if ($errors->has('telefone'))
 	      <li>{{ $errors->first('telefone') }}</li>
-	   @endif
+	       @endif
         </div>
         <div class="form-group">
                 <input type="submit" name="save_usuario" value="Salvar usuário" class="btn btn-success">
@@ -37,5 +37,3 @@
     </form>
 </div>
 @endsection
-
-

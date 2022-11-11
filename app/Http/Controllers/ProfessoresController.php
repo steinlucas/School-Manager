@@ -73,7 +73,7 @@ class ProfessoresController extends Controller
             $request->session()->flash('message', 'Operação cancelada pelo usuário'); 
         }
        
-        return redirect()->to(route('usuario.index'));
+        return redirect()->to(route('professor.index'));
     }
 
     public function destroy($id)
@@ -81,5 +81,11 @@ class ProfessoresController extends Controller
         $professor = Professor::find($id);
         $professor->delete();
         return redirect()->route('professor.index')->with('message','Professor deletado com sucesso!');
+    }
+
+    public function edit($id)
+    {
+        $professor = Professor::find($id);
+        return view('professores.edit',compact('professor'));
     }
 }
