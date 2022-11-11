@@ -1,0 +1,22 @@
+create table professores (
+	id int not null primary key auto_increment,
+	nome varchar(250),
+    registro int(20),
+    cpf int(11),
+    formacao varchar(50),
+    cidade varchar(50),
+    telefone int(11)
+);
+
+create table alunos (
+	id int not null primary key auto_increment,
+	nome varchar(250),
+    cpf int(12),
+    endereco varchar(20),
+    cidade varchar(50),
+    telefone int(12),
+    sexo varchar(9),
+    data_nascimento varchar(10),
+    matricula int(11),
+    data_matricula varchar(10)
+)
