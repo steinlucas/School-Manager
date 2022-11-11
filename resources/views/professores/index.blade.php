@@ -50,4 +50,3 @@
     <div class="col-md-8"> <a href="{{ route('professor.create') }}" class="btn btn-primary">Incluir Professor</a> </div>
 </div>
 @endsection
-

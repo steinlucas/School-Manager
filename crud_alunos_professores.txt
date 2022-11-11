@@ -20,3 +20,12 @@ create table alunos (
     matricula int(11),
     data_matricula varchar(10)
 )
+
+create or replace table cursos (
+	id int not null primary key auto_increment,
+	nome varchar(250),
+    ano_oferta varchar(5),
+    data_inicio varchar(11),
+    data_fim varchar(11),
+    carga_horaria varchar(5)
+)

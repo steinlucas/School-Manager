@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProfessoresController;
 use App\Http\Controllers\AlunosController;
+use App\Http\Controllers\CursosController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,3 +41,10 @@ Route::post('/alunos/store', [AlunosController::class, 'store'])->name('aluno.st
 Route::get('/alunos/edit/{id}', [AlunosController::class, 'edit'])->name('aluno.edit');
 Route::post('/alunos/update/{id}', [AlunosController::class, 'update'])->name('aluno.update');
 Route::get('/alunos/destroy/{id}', [AlunosController::class, 'destroy'])->name('aluno.destroy');
+
+Route::get('/cursos', [CursosController::class, 'index'])->name('curso.index');
+Route::get('/cursos/create', [CursosController::class, 'create'])->name('curso.create');
+Route::post('/cursos/store', [CursosController::class, 'store'])->name('curso.store');
+Route::get('/cursos/edit/{id}', [CursosController::class, 'edit'])->name('curso.edit');
+Route::post('/cursos/update/{id}', [CursosController::class, 'update'])->name('curso.update');
+Route::get('/cursos/destroy/{id}', [CursosController::class, 'destroy'])->name('curso.destroy');
