@@ -1,11 +1,11 @@
-create table professores (
+create or replace table professores (
 	id int not null primary key auto_increment,
 	nome varchar(250),
     registro int(20),
-    cpf int(11),
+    cpf varchar(11),
     formacao varchar(50),
     cidade varchar(50),
-    telefone int(11)
+    telefone varchar(11)
 );
 
 create table alunos (
